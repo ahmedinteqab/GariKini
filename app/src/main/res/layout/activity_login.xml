@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <!-- Top Action Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00796B"
+        app:title="GariKini"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
+
+            <!-- Title: Login -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="#00796B"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:text="Please sign in to continue"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <!-- Phone Number Label & Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="#E0E0E0"
+                android:hint="01881788..."
+                android:inputType="phone"
+                android:paddingHorizontal="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <!-- Password Label & Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="#E0E0E0"
+                android:hint="Type Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="16dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <!-- Login Button with Arrow -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#00796B"
+                android:drawableEnd="@android:drawable/ic_menu_send"
+                android:paddingHorizontal="16dp"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="4dp" />
+
+            <!-- Spacer to push Sign Up to the bottom -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="100dp" />
+
+            <!-- Bottom Registration Prompt -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:text="Don't have an account?"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Sign Up Button with User Icon -->
+            <Button
+                android:id="@+id/btnGoToRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#00796B"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:paddingHorizontal="16dp"
+                android:text="Sign Up"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

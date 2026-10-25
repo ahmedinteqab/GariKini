@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    android:orientation="vertical">
+
+    <!-- Top Action Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLocation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00897B"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:title="GariKini"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Pick a Location"
+                android:textColor="#212121"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Stack of Location Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Chattogram -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardChattogram"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Chattogram"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Rajshahi -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRajshahi"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Rajshahi"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Khulna -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKhulna"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Khulna"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barisal -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBarisal"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Barisal"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Sylhet -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSylhet"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Sylhet"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Dhaka -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardDhaka"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Dhaka"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Rangpur -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRangpur"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Rangpur"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Mymensingh -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMymensingh"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Mymensingh"
+                        android:textColor="#424242"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

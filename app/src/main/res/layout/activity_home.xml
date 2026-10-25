@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationContainer"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar with Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#00897B"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GARI KINI"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Top Navigation Quick Actions Row (Bangladesh, Category, Biman E-Ticket) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- Location Selector -->
+            <LinearLayout
+                android:id="@+id/layoutLocation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    app:tint="#00897B" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bangladesh"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="12dp"
+                android:background="#E0E0E0" />
+
+            <!-- Category -->
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:tint="#0288D1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="12dp"
+                android:background="#E0E0E0" />
+
+            <!-- Biman E-Ticket -->
+            <LinearLayout
+                android:id="@+id/layoutBimanTicket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@android:drawable/ic_menu_directions"
+                    app:tint="#1976D2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biman\nE-Ticket"
+                    android:textColor="#333333"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Announcement & Refresh Banner Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="#E0F2F1"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="বিশেষ অফার! এখন থেকে..."
+                android:textColor="#00796B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#00897B"
+                android:text="বিস্তারিত .."
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:cornerRadius="4dp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:backgroundTint="#0288D1"
+                android:text="Refresh"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:cornerRadius="4dp" />
+        </LinearLayout>
+
+        <!-- Listings Grid View (2 Columns) -->
+        <GridView
+            android:id="@+id/gvListings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="8dp"
+            android:numColumns="2"
+            android:padding="8dp"
+            android:verticalSpacing="8dp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar Container -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- Home Nav -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="#00897B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#00897B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Search Nav -->
+        <LinearLayout
+            android:id="@+id/navSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="#757575" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#757575"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Center Floating Post Action Button Space -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#03A9F4"
+                android:contentDescription="Add Post"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:text="Post"
+                android:textColor="#757575"
+                android:textSize="10sp" />
+        </FrameLayout>
+
+        <!-- Chats Nav -->
+        <LinearLayout
+            android:id="@+id/navChats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_send"
+                app:tint="#757575" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chats"
+                android:textColor="#757575"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Profile Nav -->
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:tint="#757575" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#757575"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
